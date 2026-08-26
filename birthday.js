@@ -313,7 +313,7 @@ const animationTimeline = () => {
     },
     "+=5"
 )
-        .to(".video-section", 0.7, {
+   .to(".video-section", 0.7, {
     visibility: "visible",
     opacity: 1,
     zIndex: 5,
@@ -323,6 +323,25 @@ const animationTimeline = () => {
     opacity: 0,
     y: -20,
 })
+
+.to(".bouquet-img", 0.9, {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    rotation: 0,
+    ease: Back.easeOut.config(1.7),
+})
+
+.to(
+    ".bouquet-img",
+    0.6,
+    {
+        opacity: 0,
+        y: -30,
+        scale: 0.8,
+    },
+    "+=2"
+)
 
 .staggerFrom(
     ".birthday-video",
