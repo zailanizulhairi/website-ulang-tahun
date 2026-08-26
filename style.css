@@ -350,6 +350,44 @@
     height: 140px;
   }
 }
+.video-section {
+  top: 5vh !important;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.video-section h2 {
+  width: 100%;
+  margin-bottom: 15px;
+  color: #ffb3c1;
+  font-size: 2rem;
+}
+
+.birthday-video {
+  width: 260px;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .video-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .birthday-video {
+    width: 42%;
+    max-height: 55vh;
+  }
+}
   /* Media Queries */
   @media screen and (max-height: 1000px) {
     .six .hat {
