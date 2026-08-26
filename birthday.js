@@ -282,6 +282,37 @@ const animationTimeline = () => {
             y: 30,
             zIndex: "-1",
         })
+        .to(".gallery", 0.7, {
+    visibility: "visible",
+    opacity: 1,
+    zIndex: 5,
+})
+
+.from(".gallery h2", 0.7, {
+    opacity: 0,
+    y: -30,
+})
+
+.staggerFrom(
+    ".gallery-grid img",
+    0.7,
+    {
+        opacity: 0,
+        scale: 0.5,
+        y: 30,
+    },
+    0.2
+)
+
+.to(
+    ".gallery",
+    0.7,
+    {
+        opacity: 0,
+        visibility: "hidden",
+    },
+    "+=5"
+)
         .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
         .to(
             ".last-smile",
