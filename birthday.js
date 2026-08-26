@@ -313,6 +313,44 @@ const animationTimeline = () => {
     },
     "+=5"
 )
+        .to(".video-section", 0.7, {
+    visibility: "visible",
+    opacity: 1,
+    zIndex: 5,
+})
+
+.from(".video-section h2", 0.5, {
+    opacity: 0,
+    y: -20,
+})
+
+.staggerFrom(
+    ".birthday-video",
+    0.7,
+    {
+        opacity: 0,
+        scale: 0.8,
+    },
+    0.2
+)
+
+.call(() => {
+    document.querySelectorAll(".birthday-video").forEach((video) => {
+        video.currentTime = 0;
+        video.muted = true;
+        video.play();
+    });
+})
+
+.to(
+    ".video-section",
+    0.7,
+    {
+        opacity: 0,
+        visibility: "hidden",
+    },
+    "+=10"
+)
         .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
         .to(
             ".last-smile",
